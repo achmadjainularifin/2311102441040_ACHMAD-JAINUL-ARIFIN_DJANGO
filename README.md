@@ -9,5 +9,5 @@ Website ini merupakan portfolio pribadi saya yang berisi tentang informasi diri 
 1. **Salin proyek**
 
    ```bash
-   [git clone https://github.com/akhmadqasim/portfolio](https://github.com/achmadjainularifin/2311102441040_ACHMAD-JAINUL-ARIFIN_DJANGO).git
+   https://github.com/achmadjainularifin/2311102441040_ACHMAD-JAINUL-ARIFIN_DJANGO.git
 
