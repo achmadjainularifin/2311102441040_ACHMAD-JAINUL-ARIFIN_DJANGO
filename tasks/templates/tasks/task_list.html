@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Daftar Tugas</title>
+  </head>
+  <body>
+    <h1>Daftar Tugas</h1>
+    <ul>
+      {% for task in tasks %}
+      <li>
+        {{ task.title }} - {% if task.completed %}✅ Selesai{% else %}❌ Belum
+        Selesai{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
