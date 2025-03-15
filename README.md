@@ -9,7 +9,7 @@ Website ini merupakan portfolio pribadi saya yang berisi tentang informasi diri 
 1. **Clone Repository**
 
    ```bash
-   https://github.com/achmadjainularifin/2311102441040_ACHMAD-JAINUL-ARIFIN_DJANGO.git
+   git clone https://github.com/achmadjainularifin/2311102441040_ACHMAD-JAINUL-ARIFIN_DJANGO.git
 
 2. **Buat Virtual Environment & Install Dependencies**
 
@@ -19,6 +19,3 @@ env/bin/activate  # Mac/Linux
 env\Scripts\activate  # Windows
 pip install -r requirements.txt
 
-3. **Jalankan Migrasi Database**
-
-```bash python manage.py migrate
