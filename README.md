@@ -6,7 +6,7 @@ Website ini merupakan portfolio pribadi saya yang berisi tentang informasi diri 
 2. Halaman Projek - Menampilkan projek apa saja yang telah saya buat.
 
 #Cara Menjalankan Project
-1. Salin Project
+1. **Salin Project**
    '''bash
    git clone https://github.com/achmadjainularifin/2311102441040_ACHMAD-JAINUL-ARIFIN_DJANGO.git
 cd 2311102441040_ACHMAD-JAINUL-ARIFIN_DJANGO
