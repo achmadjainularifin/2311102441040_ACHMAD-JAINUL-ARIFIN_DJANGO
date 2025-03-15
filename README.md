@@ -24,3 +24,6 @@ Website ini merupakan portfolio pribadi saya yang berisi tentang informasi diri 
    ```bash
    python manage.py migrate
 
+4. **Jalankan Server**
+   ```bash
+   python manage.py runserver
