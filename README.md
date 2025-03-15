@@ -19,3 +19,8 @@ Website ini merupakan portfolio pribadi saya yang berisi tentang informasi diri 
    env\Scripts\activate  # Windows
    pip install -r requirements.txt
 
+3. **Jalankan Migrasi Database**
+
+   ```bash
+   python manage.py migrate
+
