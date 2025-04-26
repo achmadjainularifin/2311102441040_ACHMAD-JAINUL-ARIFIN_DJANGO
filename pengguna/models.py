@@ -10,3 +10,6 @@ class Biodata(models.Model):
 
     def _str_(self):
         return self.user.username
+    
+    class Meta:
+        verbose_name_plural = "1. Biodata"
