@@ -24,8 +24,7 @@ Website ini merupakan portfolio pribadi saya yang berisi tentang informasi diri 
    python -m venv env source
    env/bin/activate  # Mac/Linux
    env\Scripts\activate  # Windows
-   pip install -r requirements.txt
-
+ 
    ```
 
 3. **Jalankan Migrasi Database**
