@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masuk ke Akun</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="{% static 'halaman/assets/img/favicon.png' %}"
+    />
+    <!-- Google Font: Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <!-- Material Kit CSS -->
+    <link
+      href="{% static 'halaman/assets/css/material-kit-pro.css' %}?v=3.0.0"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: url("https://images.unsplash.com/photo-1572509018340-1fc13b5df491?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+          no-repeat center center fixed;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+      }
+
+      @keyframes zoom-in {
+        from {
+          transform: scale(0.5);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .login-card {
+        background: rgba(10, 25, 50, 0.7);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        padding: 40px;
+        width: 100%;
+        max-width: 400px;
+        color: #fff;
+        animation: zoom-in 0.6s ease-out;
+      }
+
+      .login-card h4 {
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .input-group-outline {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .input-group-outline input {
+        width: 100%;
+        padding: 12px 16px;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+      }
+
+      .input-group-outline label {
+        font-size: 14px;
+        margin-bottom: 6px;
+        display: block;
+        color: #fff;
+      }
+
+      .btn-login {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+        color: white;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .btn-login:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .text-muted {
+        color: #fff;
+      }
+
+      .text-danger {
+        color: #ff6b6b;
+      }
+
+      a {
+        color: #79cfff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #9e9eff;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="login-card">
+      <h4 style="color: #fff">Selamat Datang Kembali</h4>
+
+      <form method="post">
+        {% csrf_token %}
+        <div class="input-group-outline">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+
+        <div class="input-group-outline">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        {% if pesan %}
+        <p class="text-danger text-center">{{ pesan }}</p>
+        {% endif %}
+
+        <button type="submit" class="btn-login mt-3">Masuk</button>
+
+        <p class="mt-4 text-sm text-center text-white">
+          Belum punya akun?
+          <a href="{% url 'akun_registrasi' %}">Daftar Sekarang</a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
